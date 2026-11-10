@@ -1,113 +1,89 @@
-Llanquihue Tour
+🧠 Actividad Sumativa 1: Realizando validación, excepciones y relaciones entre clases
 
-Proyecto académico – Desarrollo Orientado a Objetos I
-1. Descripción del proyecto
+👤 Autor del proyecto
 
-Llanquihue Tour es un proyecto desarrollado en Java que representa el modelo básico de una agencia de turismo ubicada en la Región de Los Lagos, Chile.
+Nombre completo: Kevin Chacon
 
-El objetivo es organizar y representar información de las personas relacionadas con la agencia, utilizando los principios fundamentales de la Programación Orientada a Objetos (POO).
+Sección: 204
 
-El proyecto permite representar personas, empleados y sus respectivas direcciones, aplicando relaciones entre clases, encapsulamiento, herencia, composición y manejo de excepciones.
-2. Objetivos del proyecto
+Carrera: Analista Programador
 
-   Aplicar los conceptos fundamentales de Programación Orientada a Objetos.
+📘 Descripción general del sistema
 
-   Implementar clases con atributos privados y métodos de acceso.
+Este proyecto corresponde a la Actividad Sumativa 1 de la asignatura Desarrollo Orientado a Objetos I.
 
-   Utilizar constructores para inicializar objetos.
+El sistema desarrollado se denomina Llanquihue Tour y representa una aplicación básica para gestionar información de personas y empleados de una empresa dedicada al turismo en la Región de Los Lagos.
 
-   Aplicar herencia mediante una clase base y una clase derivada.
+El proyecto fue desarrollado en Java utilizando IntelliJ IDEA y Maven, aplicando conceptos fundamentales de la programación orientada a objetos, tales como:
 
-   Implementar composición entre objetos.
+Encapsulamiento: uso de atributos privados y métodos getters y setters para controlar el acceso a los datos.
 
-   Incorporar validaciones para los datos personales.
+Herencia: implementación de la clase Empleado, que hereda los atributos y comportamientos de la clase Persona.
 
-   Utilizar excepciones para controlar situaciones de error.
+Composición: relación entre las clases Persona y Direccion, donde una persona contiene un objeto de tipo dirección.
 
+Constructores: inicialización de los objetos mediante sus respectivos constructores.
 
-3. Tecnologías utilizadas
+Validación de datos: comprobación de los datos ingresados para evitar información vacía o con formatos incorrectos.
 
-   Lenguaje: Java.
+Manejo de excepciones: utilización de try, catch, throw y finally para controlar situaciones de error durante la ejecución del programa.
 
-   Gestor de proyectos: Apache Maven.
+El objetivo principal es aplicar los conceptos estudiados durante la asignatura mediante la creación de clases relacionadas entre sí y la implementación de validaciones que permitan mantener la consistencia de los datos.
 
-   Entorno de desarrollo: IntelliJ IDEA.
+🧱 Estructura general del proyecto
 
-   Control de versiones: Git.
+El proyecto utiliza una estructura Maven y se organiza de la siguiente manera:
 
-   Repositorio remoto: GitHub.
+Realizandovalidacionexcepcionesyrelacionesentreclases/
+│
+├── src/
+│   └── main/
+│       └── java/
+│           │
+│           ├── app/
+│           │   └── Main.java
+│           │
+│           └── model/
+│               ├── Persona.java
+│               ├── Empleado.java
+│               └── Direccion.java
+│
+├── pom.xml
+├── .gitignore
+└── README.md
 
-
-4. Estructura del proyecto
-
-El proyecto está organizado mediante los siguientes paquetes y clases:
+📂 Descripción de los paquetes y clases
 
 Paquete app
 
-    Main.java: contiene el método principal del programa. Se encarga de crear las instancias de las clases, realizar las pruebas de funcionamiento y mostrar la información mediante consola.
+Main.java: contiene el método principal del programa. Se encarga de crear los objetos, realizar las validaciones, controlar los RUT registrados y mostrar los resultados por consola.
 
 Paquete model
 
-    Persona.java: clase base que representa a una persona mediante sus atributos nombre, RUT y dirección. Incluye constructores, getters, setters, validaciones y sobrescritura del método toString().
+Persona.java: clase base que representa a una persona. Contiene los atributos nombre, RUT y dirección, además de sus respectivos métodos de acceso y validaciones.
 
-    Empleado.java: clase derivada de Persona que utiliza herencia para incorporar el atributo adicional cargo. Implementa su propio constructor y sobrescribe el método toString().
+Empleado.java: clase que hereda de Persona y agrega el atributo cargo.
 
-    Direccion.java: clase que representa la dirección de una persona, almacenando calle, ciudad y región.
+Direccion.java: clase que representa la dirección de una persona, incluyendo calle, ciudad y región.
 
-5. Conceptos de Programación Orientada a Objetos aplicados
-   Encapsulamiento
+⚙️ Instrucciones para clonar y ejecutar el proyecto
 
-Los atributos de las clases se encuentran declarados como private, permitiendo controlar el acceso y la modificación de los datos mediante métodos getters y setters.
-Herencia
+Para obtener y ejecutar el proyecto, se deben seguir los siguientes pasos:
 
-La clase Empleado hereda de la clase Persona mediante la palabra reservada extends, reutilizando sus atributos y métodos.
-Composición
-
-La clase Persona contiene un objeto de tipo Direccion como atributo, estableciendo una relación de composición entre ambas clases.
-Constructores
-
-Se utilizan constructores para inicializar los atributos de los objetos al momento de su creación.
-Sobrescritura de métodos
-
-Se implementa toString() mediante @Override para representar la información de los objetos de forma legible.
-Manejo de excepciones y validaciones
-
-Se incorporan validaciones para evitar nombres vacíos, comprobar el formato del RUT y controlar la duplicidad de RUT mediante ArrayList.
-
-Se utilizan throw, try-catch y finally para manejar situaciones de error durante las pruebas de registro.
-6. Requisitos para ejecutar el proyecto
-
-Para ejecutar el proyecto se necesita:
-
-    Tener instalado Java JDK.
-
-    Tener instalado IntelliJ IDEA.
-
-    Contar con acceso a los archivos del proyecto.
-
-    Tener Maven disponible mediante IntelliJ IDEA.
-
-7. Instalación y ejecución
-
-   Clonar el repositorio desde GitHub:
+Clonar el repositorio: abrir Git Bash o una terminal y ejecutar el siguiente comando:
 
 git clone https://github.com/kevinchacon-dev/Llanquihue-Tour-Evaluacion-DOO-sem-3-.git
 
-    Abrir IntelliJ IDEA.
+Abrir el proyecto: iniciar IntelliJ IDEA y seleccionar la opción para abrir un proyecto existente. Luego, seleccionar la carpeta descargada.
 
-    Seleccionar Open y buscar la carpeta del proyecto descargado.
+Verificar la estructura: comprobar que IntelliJ IDEA reconozca la estructura Maven y que los paquetes app y model estén correctamente identificados.
 
-    Abrir el archivo pom.xml y esperar a que Maven configure el proyecto.
+Ejecutar el programa: abrir la clase Main.java, ubicada en el paquete app, y ejecutar el método main().
 
-    Navegar hasta src/main/java/app/Main.java.
+Visualizar los resultados: revisar la consola de IntelliJ IDEA para observar la creación de los objetos, las validaciones realizadas y los mensajes correspondientes al manejo de excepciones.
 
-    Ejecutar el método main() para iniciar el programa.
+🔗 Repositorio GitHub
 
-8. Autor
+Repositorio GitHub: https://github.com/kevinchacon-dev/Llanquihue-Tour-Evaluacion-DOO-sem-3-/
 
-Kevin Chacon
-
-Proyecto académico desarrollado para la asignatura Desarrollo Orientado a Objetos I.
-9. Repositorio
-
-GitHub: Llanquihue Tour – Evaluación DOO
+Fecha de entrega: 09/11/2026
